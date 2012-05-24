@@ -77,7 +77,7 @@
                     <navigationItem key="navigationItem" title="Account" id="rdo-PV-0x8"/>
                 </viewController>
             </objects>
-            <point key="canvasLocation" x="397" y="99"/>
+            <point key="canvasLocation" x="421" y="99"/>
         </scene>
         <!--Table View Controller - Roster-->
         <scene sceneID="O7c-qI-rCe">
