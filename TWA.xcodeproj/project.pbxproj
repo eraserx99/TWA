@@ -14,7 +14,6 @@
 		AA369048156DEBD9001F38FE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AA369047156DEBD9001F38FE /* main.m */; };
 		AA36904C156DEBD9001F38FE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36904B156DEBD9001F38FE /* AppDelegate.m */; };
 		AA36904F156DEBD9001F38FE /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA36904D156DEBD9001F38FE /* MainStoryboard.storyboard */; };
-		AA369052156DEBD9001F38FE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA369051156DEBD9001F38FE /* ViewController.m */; };
 		AA369157156DEC06001F38FE /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36905C156DEC05001F38FE /* XMPPAnonymousAuthentication.m */; };
 		AA369158156DEC06001F38FE /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AA36905F156DEC05001F38FE /* XMPPDeprecatedDigestAuthentication.m */; };
 		AA369159156DEC06001F38FE /* XMPPDeprecatedPlainAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = AA369062156DEC05001F38FE /* XMPPDeprecatedPlainAuthentication.m */; };
@@ -133,8 +132,6 @@
 		AA36904A156DEBD9001F38FE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		AA36904B156DEBD9001F38FE /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		AA36904E156DEBD9001F38FE /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
-		AA369050156DEBD9001F38FE /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		AA369051156DEBD9001F38FE /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		AA36905B156DEC05001F38FE /* XMPPAnonymousAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPAnonymousAuthentication.h; sourceTree = "<group>"; };
 		AA36905C156DEC05001F38FE /* XMPPAnonymousAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPAnonymousAuthentication.m; sourceTree = "<group>"; };
 		AA36905E156DEC05001F38FE /* XMPPDeprecatedDigestAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPDeprecatedDigestAuthentication.h; sourceTree = "<group>"; };
@@ -413,8 +410,6 @@
 				AA36904A156DEBD9001F38FE /* AppDelegate.h */,
 				AA36904B156DEBD9001F38FE /* AppDelegate.m */,
 				AA36904D156DEBD9001F38FE /* MainStoryboard.storyboard */,
-				AA369050156DEBD9001F38FE /* ViewController.h */,
-				AA369051156DEBD9001F38FE /* ViewController.m */,
 				AA369042156DEBD9001F38FE /* Supporting Files */,
 			);
 			path = TWA;
@@ -1059,7 +1054,6 @@
 			files = (
 				AA369048156DEBD9001F38FE /* main.m in Sources */,
 				AA36904C156DEBD9001F38FE /* AppDelegate.m in Sources */,
-				AA369052156DEBD9001F38FE /* ViewController.m in Sources */,
 				AA369157156DEC06001F38FE /* XMPPAnonymousAuthentication.m in Sources */,
 				AA369158156DEC06001F38FE /* XMPPDeprecatedDigestAuthentication.m in Sources */,
 				AA369159156DEC06001F38FE /* XMPPDeprecatedPlainAuthentication.m in Sources */,
