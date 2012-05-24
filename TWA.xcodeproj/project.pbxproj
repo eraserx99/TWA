@@ -118,6 +118,7 @@
 		AA3691C2156DEE44001F38FE /* libresolv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3691C1156DEE44001F38FE /* libresolv.dylib */; };
 		AA3691C4156DEEAB001F38FE /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3691C3156DEEAB001F38FE /* CoreLocation.framework */; };
 		AA3691C8156DF068001F38FE /* libxml2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = AA3691C7156DF068001F38FE /* libxml2.dylib */; };
+		AA3693B6156EAB14001F38FE /* SignInViewControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AA3693B5156EAB14001F38FE /* SignInViewControllerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -344,6 +345,8 @@
 		AA3691C1156DEE44001F38FE /* libresolv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libresolv.dylib; path = usr/lib/libresolv.dylib; sourceTree = SDKROOT; };
 		AA3691C3156DEEAB001F38FE /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		AA3691C7156DF068001F38FE /* libxml2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.dylib; path = usr/lib/libxml2.dylib; sourceTree = SDKROOT; };
+		AA3693B4156EAB14001F38FE /* SignInViewControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SignInViewControllerViewController.h; sourceTree = "<group>"; };
+		AA3693B5156EAB14001F38FE /* SignInViewControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SignInViewControllerViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -410,6 +413,8 @@
 				AA36904A156DEBD9001F38FE /* AppDelegate.h */,
 				AA36904B156DEBD9001F38FE /* AppDelegate.m */,
 				AA36904D156DEBD9001F38FE /* MainStoryboard.storyboard */,
+				AA3693B4156EAB14001F38FE /* SignInViewControllerViewController.h */,
+				AA3693B5156EAB14001F38FE /* SignInViewControllerViewController.m */,
 				AA369042156DEBD9001F38FE /* Supporting Files */,
 			);
 			path = TWA;
@@ -1149,6 +1154,7 @@
 				AA3691B4156DEC06001F38FE /* DDXMLDocument.m in Sources */,
 				AA3691B5156DEC06001F38FE /* DDXMLElement.m in Sources */,
 				AA3691B6156DEC06001F38FE /* DDXMLNode.m in Sources */,
+				AA3693B6156EAB14001F38FE /* SignInViewControllerViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

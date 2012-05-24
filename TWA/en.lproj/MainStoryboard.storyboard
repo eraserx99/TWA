@@ -21,11 +21,11 @@
             </objects>
             <point key="canvasLocation" x="-73" y="102"/>
         </scene>
-        <!--View Controller - Account-->
+        <!--Sign In View Controller View Controller - Sign In!-->
         <scene sceneID="h5a-mA-HBx">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d25-SF-AJG" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <viewController id="OYw-CQ-KVD" sceneMemberID="viewController">
+                <viewController id="OYw-CQ-KVD" customClass="SignInViewControllerViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hBF-f0-9SW">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -68,18 +68,19 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="signIn:" destination="OYw-CQ-KVD" eventType="touchUpInside" id="oAb-ve-Wfd"/>
                                     <segue destination="feR-4N-4Fu" kind="push" id="O6u-It-qHa"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Account" id="rdo-PV-0x8"/>
+                    <navigationItem key="navigationItem" title="Sign In!" id="rdo-PV-0x8"/>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="421" y="99"/>
         </scene>
-        <!--Table View Controller - Roster-->
+        <!--Table View Controller - Buddy-->
         <scene sceneID="O7c-qI-rCe">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SGT-Ys-R5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -104,7 +105,7 @@
                             <outlet property="delegate" destination="feR-4N-4Fu" id="4yX-kh-l9b"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Roster" id="ueq-TB-xlz"/>
+                    <navigationItem key="navigationItem" title="Buddy" id="ueq-TB-xlz"/>
                 </tableViewController>
             </objects>
             <point key="canvasLocation" x="881" y="99"/>
