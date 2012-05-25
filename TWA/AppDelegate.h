@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "XMPPFramework.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate> {    
+@interface AppDelegate : UIResponder <UIApplicationDelegate, XMPPStreamDelegate, XMPPRosterDelegate> {    
     XMPPvCardCoreDataStorage *xmppvCardStorage;
     XMPPCapabilitiesCoreDataStorage *xmppCapabilitiesStorage;
     
