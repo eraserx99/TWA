@@ -55,7 +55,8 @@ NSString *const kXMPPmyPassword = @"kXMPPmyPassword";
     [self setField:passwordTextField forKey:kXMPPmyPassword];
     
     // Pop up the current view and move to the next one
-    [self dismissModalViewControllerAnimated:YES];
+    [self performSegueWithIdentifier:@"toBuddy" sender:self];
+    // [self dismissModalViewControllerAnimated:YES];
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

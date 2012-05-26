@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "SignInViewController.h"
+#import "NSString+Utils.h"
 #import "DDLog.h"
 #import "DDTTYLogger.h"
 
@@ -38,6 +39,7 @@
 @synthesize xmppvCardTempModule;
 @synthesize xmppvCardAvatarModule;
 @synthesize xmppCapabilities;
+@synthesize messageDelegate;
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
@@ -48,10 +50,7 @@
     
     // Setup the XMPP framework
     [self setupStream];
-    
-    // Connect......
-    [self connect];
-    
+
     return YES;
 }
 							
@@ -227,7 +226,6 @@
  **/
 - (void)xmppStreamWillConnect:(XMPPStream *)sender {
 	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
-    
 }
 
 /**
@@ -239,7 +237,6 @@
  **/
 - (void)xmppStream:(XMPPStream *)sender socketDidConnect:(GCDAsyncSocket *)socket {
 	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
-    
 }
 
 /**
@@ -248,7 +245,6 @@
  **/
 - (void)xmppStreamDidStartNegotiation:(XMPPStream *)sender {
 	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
-    
 }
 
 /**
@@ -383,6 +379,18 @@
 - (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)message {
 	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
     
+    NSString *msg = [[message elementForName:@"body"] stringValue];
+	NSString *from = [[message attributeForName:@"from"] stringValue];
+    
+	NSMutableDictionary *m = [[NSMutableDictionary alloc] init];
+    
+    if(msg != NULL && from != NULL) {
+        [m setObject:msg forKey:@"msg"];
+        [m setObject:from forKey:@"sender"];
+        [m setObject:[NSString now] forKey:@"time"];
+        
+        [self.messageDelegate newMessageReceived:m];
+    }
 }
 
 - (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence {

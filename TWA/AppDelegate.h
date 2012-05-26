@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "XMPPFramework.h"
+#import "MessageDelegate.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate, XMPPStreamDelegate, XMPPRosterDelegate> {    
     XMPPvCardCoreDataStorage *xmppvCardStorage;
@@ -20,6 +21,7 @@
 }
 
 @property (strong, nonatomic) UIWindow *window;
+@property (weak, nonatomic) id<MessageDelegate> messageDelegate;
 @property (nonatomic, strong, readonly) XMPPStream *xmppStream;
 @property (nonatomic, strong, readonly) XMPPReconnect *xmppReconnect;
 @property (nonatomic, strong, readonly) XMPPRoster *xmppRoster;

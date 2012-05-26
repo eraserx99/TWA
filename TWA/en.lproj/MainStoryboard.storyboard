@@ -68,8 +68,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="signIn:" destination="rl8-x6-1p3" eventType="touchUpInside" id="gXa-Y1-icC"/>
-                                    <segue destination="CZh-Ys-tre" kind="push" identifier="toBuddyList" id="gcR-ip-FCt"/>
+                                    <action selector="signIn:" destination="rl8-x6-1p3" eventType="touchUpInside" id="8PD-zk-tDo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -79,27 +78,37 @@
                     <connections>
                         <outlet property="jidTextField" destination="VCB-gI-hBB" id="x9w-9E-eqr"/>
                         <outlet property="passwordTextField" destination="XE2-LQ-jYi" id="yrk-F3-REg"/>
+                        <segue destination="CZh-Ys-tre" kind="push" identifier="toBuddy" id="p24-Yr-9hb"/>
                     </connections>
                 </viewController>
             </objects>
             <point key="canvasLocation" x="599" y="268"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Buddy View Controller-->
         <scene sceneID="6uL-uC-m8d">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sAc-3d-A0x" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tableViewController id="CZh-Ys-tre" sceneMemberID="viewController">
+                <tableViewController id="CZh-Ys-tre" customClass="BuddyViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="8m9-av-VMG">
                         <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QvR-Ko-q59">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="buddy" textLabel="eBf-hO-cec" style="IBUITableViewCellStyleDefault" id="QvR-Ko-q59">
                                 <rect key="frame" x="0.0" y="22" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="eBf-hO-cec">
+                                            <rect key="frame" x="10" y="0.0" width="280" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                    </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                             </tableViewCell>
@@ -110,11 +119,109 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="w4C-dm-HsD"/>
+                    <connections>
+                        <segue destination="Ol7-nQ-77D" kind="push" identifier="toChat" id="YZ2-eR-4wc"/>
+                    </connections>
                 </tableViewController>
             </objects>
-            <point key="canvasLocation" x="1158" y="62"/>
+            <point key="canvasLocation" x="1172" y="54"/>
+        </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="rwd-ca-5wU">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AqZ-iD-ajv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController id="Ol7-nQ-77D" customClass="ChatViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rf2-jB-hp7">
+                        <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="KVK-c0-9tH">
+                                <rect key="frame" x="5" y="9" width="228" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="cAm-FK-eLG">
+                                <rect key="frame" x="241" y="6" width="72" height="37"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Send">
+                                    <color key="titleColor" red="0.19607843459999999" green="0.30980393290000002" blue="0.52156865600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <state key="highlighted">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="Ol7-nQ-77D" eventType="touchUpInside" id="qPr-aE-uuZ"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="JpI-n6-UvG">
+                                <rect key="frame" x="13" y="48" width="300" height="167"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="myChat" textLabel="puj-oI-mvf" detailTextLabel="Lti-vZ-vT5" style="IBUITableViewCellStyleSubtitle" id="s8Q-ge-GRc">
+                                        <rect key="frame" x="0.0" y="22" width="300" height="44"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="300" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="puj-oI-mvf">
+                                                    <rect key="frame" x="10" y="4" width="27" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Lti-vZ-vT5">
+                                                    <rect key="frame" x="10" y="22" width="47" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="highlightedColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </view>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="lDL-nh-tko"/>
+                    <connections>
+                        <outlet property="messageTextField" destination="KVK-c0-9tH" id="z3t-Hp-Czk"/>
+                        <outlet property="tableView" destination="JpI-n6-UvG" id="1BP-9u-JPH"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1663" y="387"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="BuddyViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BuddyViewController.h"/>
+        </class>
+        <class className="ChatViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/ChatViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="sendMessage:"/>
+                <relationship kind="outlet" name="messageTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="tableView" candidateClass="UITableView"/>
+            </relationships>
+        </class>
+        <class className="SignInViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/SignInViewController.h"/>
+            <relationships>
+                <relationship kind="action" name="signIn:"/>
+                <relationship kind="outlet" name="jidTextField" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="passwordTextField" candidateClass="UITextField"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
